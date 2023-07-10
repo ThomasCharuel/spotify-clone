@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Modal from '@/components/Modal';
+import AuthModal from '@/components/AuthModal';
 
 const ModalProvider = () => {
   // Ensure the modal is not open during SSR
@@ -15,16 +15,7 @@ const ModalProvider = () => {
     return null;
   }
 
-  return (
-    <Modal
-      title="Test Modal"
-      description="Test description"
-      isOpen
-      onChange={() => {}}
-    >
-      Test Children
-    </Modal>
-  );
+  return <AuthModal />;
 };
 
 export default ModalProvider;
