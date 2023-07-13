@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import AuthModal from '@/components/AuthModal';
+import UploadModal from '@/components/UploadModal';
 
 const ModalProvider = () => {
   // Ensure the modal is not open during SSR
@@ -15,7 +16,12 @@ const ModalProvider = () => {
     return null;
   }
 
-  return <AuthModal />;
+  return (
+    <>
+      <AuthModal />
+      <UploadModal />
+    </>
+  );
 };
 
 export default ModalProvider;
